@@ -7,6 +7,7 @@ formulario.addEventListener("submit", function (event) {
 
   adicionarCard(dados);
   event.preventDefault();
+  // this.reset()
 });
 
 function adicionarCard(dados) {

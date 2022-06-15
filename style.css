@@ -8,8 +8,6 @@
 }
 
 body {
-  /* background: #031323; */
-  overflow: hidden;
   background: linear-gradient(-15deg, #6d18ff, #ff0000, #1c003e);
   background-size: 400% 400%;
   animation: gradient 10s ease infinite;
@@ -40,87 +38,11 @@ body {
   }
 } 
 
-.box {
-  position: relative;
-  display: flex;
-  width: 100px;
-} 
-
-.box .square {
-  position: absolute;
-  background: rgba(255, 255, 255, 0.1);
-  backdrop-filter: blur(5px);
-  box-shadow: 0 25px 45px rgba(0, 0, 0, 0.1);
-  border: 1px solid rgba(255, 255, 255, 0.15);
-  border-radius: 15px;
-  animation: square 10s linear infinite;
-  animation-delay: calc(-1s * var(--i));
-}
-
-@keyframes square {
-
-  0%,
-  100% {
-    transform: translateY(-20px);
-  }
-
-  50% {
-    transform: translateY(20px);
-  }
-}
-
-.box .square:nth-child(1) {
-  width: 85px;
-  height: 85px;
-  top: -275px;
-  right: -540px;
-}
-
-.box .square:nth-child(2) {
-  width: 150px;
-  height: 150px;
-  top: -120px;
-  left: -105px;
-  z-index: 2;
-}
-
-.box .square:nth-child(3) {
-  width: 60px;
-  height: 60px;
-  bottom: 85px;
-  right: -540px;
-  top: 130px;
-  z-index: 2;
-}
-
-.box .square:nth-child(4) {
-  width: 50px;
-  height: 50px;
-  bottom: 35px;
-  left: -85px;
-  top: 170px;
-}
-
-.box .square:nth-child(5) {
-  width: 50px;
-  height: 50px;
-  top: -15px;
-  left: -25px;
-  top: -280px;
-}
-
-.box .square:nth-child(6) {
-  width: 100px;
-  height: 100px;
-  top: -90px;
-  right: -600px;
-}
-
 .container {
   position: relative;
   padding-top: 100px;
   padding-bottom: 100px;
-  width: 300px;
+  width: 400px;
   min-height: 350px;
   display: flex;
   justify-content: center;
@@ -129,6 +51,15 @@ body {
   backdrop-filter: blur(5px);
   border-radius: 10px;
   box-shadow: 0 25px 45px rgba(0, 0, 0, 0.2); 
+}
+
+@media(max-width:426px) {
+  .container {
+    width: 300px;
+  }
+  .form1 h2 {
+    font-size: 26px ! important;
+  }
 }
 
 .container::after {
@@ -347,108 +278,3 @@ footer {
   transition: 0.4s;
 }
 
-/* @media(max-width: 768px) {
-  .box {
-    position: relative;
-    display: flex;
-    width: 100px;
-  } 
-  
-  .box .square {
-    position: absolute;
-    background: rgba(255, 255, 255, 0.1);
-    backdrop-filter: blur(5px);
-    box-shadow: 0 25px 45px rgba(0, 0, 0, 0.1);
-    border: 1px solid rgba(255, 255, 255, 0.15);
-    border-radius: 15px;
-    animation: square 10s linear infinite;
-    animation-delay: calc(-1s * var(--i));
-  }
-} */
-@media(max-width: 700px) {
-  .box {
-    position: relative;
-    display: none;
-    width: 100px;
-  } 
-}
-
-@media (max-width:488px) {
-  .form1 .inputBx span {
-
-    left: 30px;
-
-
-    background-color: transparent;
-    margin-top: 0px;
-    font-size: 16px;
-  }
-
-}
-
-
-/* @media only screen and (mix-width: 320px) {
-  .formulario {
-    display: flex;
-    justify-content: center;
-    flex-direction: column;
-    gap: 15px;
-    flex-wrap: wrap;
-    text-align: center;
-  }
-
-  .box {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    flex-wrap: wrap;
-    width: 100%;
-    text-align: center;
-    gap: 15px;
-  }
-
-
-  .card {
-    display: flex;
-    width: 100%;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    flex-wrap: wrap;
-    gap: 20px;
-    justify-content: center;
-
-  }
-
-  .img {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    flex-wrap: wrap;
-    width: 100%;
-    max-width: 400;
-    min-width: 260;
-  }
-
-  .form1 {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    flex-wrap: wrap;
-    width: 90%;
-    justify-content: center;
-
-  }
-
-  .redes {
-    display: flex;
-    justify-content: center;
-    flex-direction: column;
-    gap: 15px;
-    flex-wrap: wrap;
-    text-align: center;
-  }
-} */
